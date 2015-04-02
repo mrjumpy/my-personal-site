@@ -1,0 +1,25 @@
+
+
+ <section id="pics-wall">
+    <div ng-repeat="d in data" class="main-images" ng-click="gotoDetail(d.id)">
+      
+      <img src="{{d.images.low_resolution.url}}"/>
+      
+    </div>
+  </section>
+  
+  <section id="comments-wall-wrapper">
+    <div class="filter-view">
+       <input ng-model="filterStr"/>
+       <button class="btn btn-default" ng-click="submitFilters()">過濾</button>
+       <button class="btn btn-default" ng-click="submitFilters()" ng-disabled="true">刪除</button>
+    </div>
+    <div class="comments-list">
+      <ul>
+        <li class="comments" ng-repeat="comment in comments">
+          <p>{{comment.from.full_name}}</p>
+          <span class="comment">{{comment.text}}</span>
+        </li>
+      </ul>
+    </div>  
+  </section>

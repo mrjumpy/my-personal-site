@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+  <style>
+    .main-images{
+      cursor:pointer;
+      display:block;
+      float:left;
+      width:50%;
+    }
+    
+    .main-images img{
+      width:100%;
+    }
+    
+    .filter-view{
+      display:block;
+      margin:0px auto;
+      width:80%;
+    }
+    
+    .comments{
+      display:block;
+    }
+    
+    .comments p{
+      color : #006dac;
+      margin:0px 0px 0px;
+    }
+    
+    #pics-wall{
+      width:70%;
+      float:right;
+    }
+    #comments-wall-wrapper{
+      width:30%;
+      float:left;
+    }
+     
+    .comments-list ul{
+      word-wrap: break-word;
+      
+      margin:0px auto;
+      padding:0px;
+      width:80%;
+    }
+    .comment{
+      color:#212124;
+      font-weight:400;
+      
+    }
+  </style>
+  <title>instaNoAd</title>
+  
+  
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style>
+    .navbar-nav.align-right{
+      float:right;
+    }
+  </style>
+  
+  <%headers['Access-Control-Allow-Origin'] = '*'%>
+   <% headers['Access-Control-Request-Method'] = 'POST, GET, OPTIONS, HEAD'%>
+   <% headers['Access-Control-Allow-Headers'] = 'x-requested-with,Content-Type, Authorization'%>
+</head>
+<body ng-app="instanoad" ng-controller="loginCtrl">
+  
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">InstaNoAd</a>
+    </div>
+    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-9" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav align-right">
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a href="/lgoin">登入</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <%= yield %>
+</body>
+</html>
